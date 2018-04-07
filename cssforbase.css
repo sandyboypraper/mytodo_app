@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+body,input,button{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+ background-color:azure;
+    padding: 80px 0 0 0;
+}
+
+header{  
+    width: 100%;
+    height: 80px;  
+    position: fixed;
+    padding: 15px;
+    top:0;
+    left:0;
+    z-index:5;
+    background-color:rgb(0, 56, 77);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 2px 4px rgb(236, 198, 198);
+    box-sizing: border-box;
+    box-shadow: 0 3px 4px rgb(0, 150, 204);
+    
+}
+
+header input{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    height: 40px;
+    float:left;
+    padding: 0 60px 0 10px;
+    margin-right:20px;
+    background-color:rgb(0, 75, 102);
+    outline: none;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: none;
+    appearance:none;
+    color:rgb(242, 217, 217);
+    box-sizing: border-box;
+    border-radius:2px 50px 50px 2px;
+}
+header button
+{
+    width:40px;  
+    height: 40px;
+    outline:none;
+    position:absolute;
+    border-radius: 50px;
+    top:15px;
+    right:15px;
+    border-style: none;
+    background-color: rgb(0, 179, 131);
+    cursor: pointer;
+    transition: .1s;
+}
+
+header button:hover
+{
+    background-color:darkgrey;
+}
+
+ul.todo{  
+    width:100%;
+    list-style-type: none;  
+    float: left;
+    margin-top: 30px;
+}
+
+ul.todo#completed{
+    margin-top:50px;
+}
+
+
+ul.todo#completed li .buttons button.complete{
+    color:rgb(153, 230, 153);
+}
+
+ul.todo#completed li .buttons button.complete:hover{
+    color:white;
+}
+
+ul.todo#completed:not(:empty){
+    position: relative;
+}
+
+ul.todo#completed:not(:empty):before{
+    content: '';
+   width: 150px;
+    height: 1px;
+    background-color:darkgreen;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin: 0 0 0 -96px;
+    z-index: 100;
+}
+
+ul.todo#completed li
+{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+ul.todo li{
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    margin: 10px -40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    line-height:22px;
+    background-color: rgb(0, 179, 131);
+    padding: 14px 100px 14px 14px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 10px 50px 50px 10px;
+    box-shadow: 0 1px 4px ;
+}
+
+ul.todo li:hover{
+     box-shadow: 0 2px 4px ;
+}
+
+ul.todo li .buttons{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px; 
+
+}
+
+ul.todo li .buttons button
+{
+    width: 50px;
+    height: 50px;
+    outline: none;
+    box-shadow: none;
+    border-right-style: dashed;
+    position: relative;
+    float:left;
+    border:none;
+    background-color: inherit;
+}
+
+ul.todo li .buttons button.complete
+{
+   border-radius: 0 50px 50px 0;
+}
+
+ul.todo li .buttons button i.material-icons{
+    
+    position: absolute;
+    top:12px;
+    left:12px;
+}
+
+ul.todo li .buttons button.remove:hover
+{
+    color:rgb(255, 102, 0);
+}
+
+ul.todo li .buttons button.complete:hover
+{
+    color:rgb(153, 230, 153);
+}
+
+
+ul.todo#todo:empty::after{
+    content: 'you have nothing to do!';
+}
+
+
+ul.todo#todo::after{ 
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin: 0 0 0 -40px;
+}
+
+/*rgb(153, 230, 153)*/
